@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Les Outils DCIP</title>
+<meta name="description" content="Un portail unique pour les applications locales d'une direction pédagogique : une installation, une interface de sélection, des outils qui démarrent à la demande et s'ajoutent sans programmation.">
+<style>
+  :root { --bleu: #164F9E; --marine: #123674; --or: #E4BB38; --texte: #1b2733; --doux: #5b6b80; --fond: #ffffff; --bord: #e2e8f0; --gris: #f6f8fb; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color: var(--texte); background: var(--fond); line-height: 1.6; }
+  .bandeau { background: linear-gradient(105deg, #0f2d61 0%, var(--marine) 45%, var(--bleu) 100%); color: #fff; padding: 3.5rem 1.5rem 3rem; position: relative; overflow: hidden; }
+  .bandeau::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: linear-gradient(90deg, var(--or) 0%, #FFD966 45%, transparent 100%); }
+  .dedans { max-width: 940px; margin: 0 auto; }
+  .surtitre { margin: 0 0 .4rem; font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: #FFD966; }
+  h1 { margin: 0 0 .8rem; font-size: 2.3rem; line-height: 1.15; font-weight: 700; }
+  .chapo { margin: 0; font-size: 1.08rem; opacity: .93; max-width: 42rem; }
+  main { max-width: 940px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+  section { padding: 2.6rem 0 .6rem; }
+  h2 { font-size: 1.4rem; color: var(--marine); margin: 0 0 1rem; padding-bottom: .5rem; border-bottom: 2px solid var(--or); display: inline-block; }
+  h3 { font-size: 1.05rem; color: var(--marine); margin: 1.6rem 0 .5rem; }
+  p { margin: 0 0 1rem; }
+  .encart { background: var(--gris); border-left: 3px solid var(--bleu); padding: 1.1rem 1.3rem; border-radius: 0 10px 10px 0; margin: 1.4rem 0; }
+  .encart p:last-child { margin-bottom: 0; }
+  figure { margin: 1.8rem 0; }
+  figure img { width: 100%; height: auto; display: block; border: 1px solid var(--bord); border-radius: 12px; box-shadow: 0 2px 14px rgba(18, 54, 116, .09); }
+  figcaption { margin-top: .6rem; font-size: .85rem; color: var(--doux); text-align: center; }
+  .etroit { max-width: 640px; margin-left: auto; margin-right: auto; }
+  .grille { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+  .carte { border: 1px solid var(--bord); border-radius: 12px; padding: 1.1rem 1.2rem; }
+  .carte .n { font-size: 1.9rem; font-weight: 700; color: var(--marine); line-height: 1; }
+  .carte .l { font-size: .87rem; color: var(--doux); margin-top: .4rem; display: block; }
+  table { width: 100%; border-collapse: collapse; margin: 1.2rem 0; font-size: .93rem; }
+  th, td { text-align: left; padding: .6rem .7rem; border-bottom: 1px solid var(--bord); vertical-align: top; }
+  th { color: var(--marine); font-weight: 600; }
+  .pied { border-top: 1px solid var(--bord); margin-top: 2.5rem; padding-top: 1.4rem; font-size: .85rem; color: var(--doux); }
+  .avert { background: #fff8e6; border: 1px solid #f0d999; border-radius: 10px; padding: 1rem 1.2rem; font-size: .9rem; margin: 1.6rem 0; }
+  @media (max-width: 640px) { h1 { font-size: 1.7rem; } .bandeau { padding: 2.4rem 1.2rem 2rem; } table { font-size: .86rem; } }
+</style>
+</head>
+<body>
+
+<header class="bandeau">
+  <div class="dedans">
+    <p class="surtitre">Étude de cas en ingénierie pédagogique et numérique</p>
+    <h1>Un portail unique pour les outils d'une direction pédagogique</h1>
+    <p class="chapo">Les applications se multiplient, chacune avec son lanceur, son adresse et son mode d'emploi. Les Outils DCIP les réunissent derrière une seule installation et une interface de sélection, sur le poste, sans connexion ; ils s'ouvrent à celles qui viendront.</p>
+  </div>
+</header>
+
+<main>
+
+<section>
+  <h2>Le problème</h2>
+  <p>En quelques mois, la Direction s'est dotée de plusieurs applications locales : un médiatiseur de cours, un planificateur en approche par compétences, d'autres en préparation. Chacune tourne sur l'ordinateur de celui qui l'utilise, ce qui convient à des établissements où la connexion est rare. Mais chaque outil avait son lanceur, son adresse, son installateur. Pour les équipes des établissements et les membres de la communauté de pratique, c'était autant de portes à retenir.</p>
+  <h3>Trois exigences</h3>
+  <p><strong>Une seule porte.</strong> Installer une fois, ouvrir un portail, choisir.</p>
+  <p><strong>Des outils qui restent eux-mêmes.</strong> Fusionner sans réécrire : chaque application garde son code, ses données et sa vie propre.</p>
+  <p><strong>Une place pour la suite.</strong> Ajouter un outil demain sans rouvrir le portail.</p>
+</section>
+
+<section>
+  <h2>Le principe retenu</h2>
+  <div class="encart">
+    <p><strong>Un portail léger, des outils autonomes, un registre de descriptions.</strong> Le portail lit des fichiers de description, un par utilité : nom, dossier, commande, port, ou simple lien. Il démarre l'outil choisi dans son propre processus, attend qu'il réponde, l'ouvre dans le navigateur, puis l'arrête à la fermeture. Il ne relaie rien, ne réécrit rien, n'impose rien.</p>
+  </div>
+  <p>Chaque application reçoit l'adresse du portail et affiche un bouton de retour. Un outil déjà lancé par un autre moyen est reconnu et simplement ouvert. Ce qui ne démarre pas laisse un journal lisible depuis le portail.</p>
+</section>
+
+<section>
+  <h2>Le portail</h2>
+  <figure>
+    <img src="images/portail.png" alt="Le portail des Outils DCIP : les utilités par catégorie, leur état, les boutons Démarrer et ouvrir, Arrêter, Journal">
+    <figcaption>Le portail. Les utilités sont rangées par catégorie ; chaque tuile dit ce que fait l'outil, son état et sa version.</figcaption>
+  </figure>
+  <table>
+    <tr><th>Utilité</th><th>Ce qu'elle fait</th></tr>
+    <tr><td><a href="https://oumarsall3.github.io/planificateur-apc/" style="color: var(--bleu);">Planificateur APC</a></td><td>planification de module, planification annuelle par classe, emploi du temps hebdomadaire sous contraintes</td></tr>
+    <tr><td><a href="https://oumarsall3.github.io/mediatiseur-ejang/" style="color: var(--bleu);">Médiatiseur e-jàng</a></td><td>du référentiel et des documents des enseignants à un cours prêt à déposer sur la plateforme</td></tr>
+    <tr><td>e-jàng</td><td>lien vers la plateforme nationale de formation</td></tr>
+  </table>
+  <figure class="etroit">
+    <img src="images/portail_journal.png" alt="Le journal d'une utilité ouvert dans le portail">
+    <figcaption>Le journal d'une utilité : la cause d'un échec se lit sans ouvrir de fichier.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <h2>L'extension</h2>
+  <p>Ajouter une utilité ne demande aucune programmation du portail : un fichier de description déposé dans un dossier suffit ; la page se recharge. Un outil peut être un serveur local à démarrer (dossier, commande, port) ou un simple lien vers un site. Les outils d'administration, dont cette section d'ajout, sont masqués aux utilisateurs ordinaires et s'ouvrent sur demande.</p>
+  <p>La distribution suit le même esprit : un installateur Windows qui ne demande ni droits d'administrateur ni Python, une édition portable sans installation, une édition macOS. La désinstallation ne retire jamais les données des utilisateurs.</p>
+</section>
+
+<section>
+  <h2>La vérification</h2>
+  <div class="grille">
+    <div class="carte"><span class="n">2</span><span class="l">outils réunis au lancement, un troisième en lien</span></div>
+    <div class="carte"><span class="n">1</span><span class="l">fichier de description par utilité, aucune modification du portail</span></div>
+    <div class="carte"><span class="n">3</span><span class="l">éditions : installateur Windows, portable, macOS</span></div>
+    <div class="carte"><span class="n">0</span><span class="l">fichier résiduel après installation puis désinstallation silencieuses</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>Ce que ce travail ne montre pas</h2>
+  <div class="avert">
+    <p><strong>Aucun code source, aucun installateur, aucune donnée.</strong> Les captures proviennent d'un poste de démonstration. Ce qui est présenté est la démarche : réunir des outils sans les dénaturer, puis préparer leur multiplication.</p>
+  </div>
+</section>
+
+<div class="pied">
+  <p>Portail conçu au sein de la Direction des Curricula et des Innovations Pédagogiques, ministère chargé de la formation professionnelle et technique, Sénégal. Version 0.1, diffusée en octobre 2026.</p>
+  <p><strong>Oumar SALL</strong>, technopédagogue et Doctorant en Sciences de l'Éducation. Voir les <a href="https://oumarsall3.github.io/" style="color: var(--bleu);">autres réalisations</a> ou le <a href="https://github.com/oumarsall3/outils-dcip" style="color: var(--bleu);">dépôt de présentation</a>.</p>
+</div>
+
+</main>
+</body>
+</html>
